@@ -35,7 +35,9 @@ document.body.onclick = () => {
 };
 
 recognition.onresult = (event) => {
+  console.log(event);
     let color = event.results[0][0].transcript;
+    color = color.toLowerCase().replace(/\./g, '')
     if (color.includes("azul"))
         color = "blue";
     else if(color.includes("rosa"))
