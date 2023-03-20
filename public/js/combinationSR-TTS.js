@@ -37,6 +37,14 @@ let empezar_recognition  = () =>{
   recognition.start();
 }
 
+const stopRecognitionButton = document.getElementById("stopRecognition");
+
+stopRecognitionButton.onclick = () => {
+  recognition.stop();
+};
+
+
+
 comenzar_hablar.onclick = () => {
     populateVoiceList();
     comenzar_hablar.disabled = true;
